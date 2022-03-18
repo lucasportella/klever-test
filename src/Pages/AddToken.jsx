@@ -9,8 +9,8 @@ function AddToken() {
     <div>
       <Header />
       <SubHeader />
-      <AddTokenForm />
       <AddTokenHeader />
+      <AddTokenForm />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import storageNewToken from '../../stateManager/localstorageManager';
+import { storageNewToken } from '../../stateManager/localstorageManager';
 
 function AddTokenForm() {
   const [useCurrency, setCurrency] = useState({ token: '', balance: '' });

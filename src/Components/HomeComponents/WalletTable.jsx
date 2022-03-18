@@ -1,6 +1,20 @@
 import React from 'react';
+import { loadAllSavedTokens } from '../../stateManager/localstorageManager';
 
 function WalletTable() {
+  const renderTableContent = () => {
+    const savedTokens = loadAllSavedTokens();
+    if (savedTokens) {
+      return (savedTokens.map((currency) => (
+        <tr key={currency.token}>
+          <td>{currency.token}</td>
+          <td>{currency.balance}</td>
+        </tr>
+      )));
+    }
+    return null;
+  };
+  renderTableContent();
   return (
     <table>
       <thead>
@@ -9,6 +23,9 @@ function WalletTable() {
           <th>Balance</th>
         </tr>
       </thead>
+      <tbody>
+        {renderTableContent()}
+      </tbody>
     </table>
   );
 }

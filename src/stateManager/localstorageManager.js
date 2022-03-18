@@ -12,4 +12,6 @@ const storageNewToken = (payload) => {
   }
 };
 
-export default storageNewToken;
+const loadAllSavedTokens = () => JSON.parse(localStorage.getItem('wallet'));
+
+export { storageNewToken, loadAllSavedTokens };
