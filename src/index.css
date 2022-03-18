@@ -12,3 +12,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.kleverLogo {
+  width: 300px
+}
+
+.shootingStar {
+  width: 30px;
+}
