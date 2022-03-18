@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddTokenInputs() {
+function EditTokenForm() {
   return (
     <form>
       <label htmlFor="token">
@@ -11,9 +11,10 @@ function AddTokenInputs() {
         Balance
         <input id="balance" />
       </label>
+      <button type="button">Remove</button>
       <button type="button">Save</button>
     </form>
   );
 }
 
-export default AddTokenInputs;
+export default EditTokenForm;

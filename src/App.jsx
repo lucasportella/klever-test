@@ -4,7 +4,8 @@ import SubHeader from './Components/SubHeader';
 import AddTokenButton from './Components/AddTokenButton';
 import WalletTable from './Components/WalletTable';
 import AddTokenHeader from './Components/AddTokenHeader';
-import AddTokenInputs from './Components/AddTokenInputs';
+import AddTokenForm from './Components/AddTokenForm';
+import EditTokenForm from './Components/EditTokenForm';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <AddTokenButton />
       <WalletTable />
       <AddTokenHeader />
-      <AddTokenInputs />
+      <AddTokenForm />
+      <EditTokenForm />
     </div>
   );
 }
