@@ -1,22 +1,14 @@
 import React from 'react';
-import Header from './Components/Header';
-import SubHeader from './Components/SubHeader';
-import AddTokenButton from './Components/AddTokenButton';
-import WalletTable from './Components/WalletTable';
-import AddTokenHeader from './Components/AddTokenHeader';
-import AddTokenForm from './Components/AddTokenForm';
-import EditTokenForm from './Components/EditTokenForm';
+import Home from './Pages/Home';
+import AddToken from './Pages/AddToken';
+import EditToken from './Pages/EditToken';
 
 function App() {
   return (
     <div>
-      <Header />
-      <SubHeader />
-      <AddTokenButton />
-      <WalletTable />
-      <AddTokenHeader />
-      <AddTokenForm />
-      <EditTokenForm />
+      <Home />
+      <AddToken />
+      <EditToken />
     </div>
   );
 }

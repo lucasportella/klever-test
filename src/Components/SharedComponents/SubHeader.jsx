@@ -1,5 +1,5 @@
 import React from 'react';
-import shootingStar from '../assets/shooting-star.svg';
+import shootingStar from '../../assets/shooting-star.svg';
 
 function SubHeader() {
   return (
