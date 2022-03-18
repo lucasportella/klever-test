@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { storageEditToken, storageDeleteToken } from '../../stateManager/localstorageManager';
 
 function EditTokenForm() {
+  const navigate = useNavigate();
   const { state: { token, balance } } = useLocation();
   const [useCurrency, setCurrency] = useState({ token, balance });
+  const prevState = { token, balance };
 
   const handleChange = ({ target: { name, value } }) => {
     setCurrency({ ...useCurrency, [name]: value });
+  };
+
+  const editTokenAndExit = () => {
+    storageEditToken(prevState, useCurrency);
+    navigate('/');
+  };
+
+  const deleteTokenAndExit = () => {
+    storageDeleteToken(useCurrency);
+    navigate('/');
   };
 
   return (
@@ -19,8 +32,8 @@ function EditTokenForm() {
         Balance
         <input onChange={handleChange} type="number" id="balanceInput" name="balance" value={useCurrency.balance} />
       </label>
-      <button type="button">Remove</button>
-      <button type="button">Save</button>
+      <button onClick={deleteTokenAndExit} type="button">Remove</button>
+      <button onClick={editTokenAndExit} type="button">Save</button>
     </form>
   );
 }

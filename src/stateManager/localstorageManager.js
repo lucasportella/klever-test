@@ -1,3 +1,5 @@
+const loadAllSavedTokens = () => JSON.parse(localStorage.getItem('wallet'));
+
 const storageNewToken = (payload) => {
   if (!localStorage.length) {
     localStorage.setItem('wallet', JSON.stringify([payload]));
@@ -12,6 +14,19 @@ const storageNewToken = (payload) => {
   }
 };
 
-const loadAllSavedTokens = () => JSON.parse(localStorage.getItem('wallet'));
+const storageEditToken = (prevState, payload) => {
+  const wallet = JSON.parse(localStorage.getItem('wallet'));
+  const updatedWallet = wallet
+    .map((currency) => (currency.token === prevState.token ? payload : currency));
+  localStorage.setItem('wallet', JSON.stringify(updatedWallet));
+};
 
-export { storageNewToken, loadAllSavedTokens };
+const storageDeleteToken = (payload) => {
+  const wallet = JSON.parse(localStorage.getItem('wallet'));
+  const updatedWallet = wallet.filter((currency) => currency.token !== payload.token);
+  localStorage.setItem('wallet', JSON.stringify(updatedWallet));
+};
+
+export {
+  storageNewToken, loadAllSavedTokens, storageEditToken, storageDeleteToken,
+};
