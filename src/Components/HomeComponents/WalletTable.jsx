@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { loadAllSavedTokens } from '../../stateManager/localstorageManager';
+import edit from '../../assets/edit.png';
 
 function WalletTable() {
   const renderTableContent = () => {
@@ -8,8 +9,10 @@ function WalletTable() {
     if (savedTokens) {
       return (savedTokens.map((currency) => (
         <tr key={currency.token}>
-          <td><Link to="edittoken" state={currency}>a</Link></td>
-          <td>{currency.token}</td>
+          <td>
+            <span><Link to="edittoken" state={currency}><img width="15" src={edit} alt="edit" /></Link></span>
+            {currency.token.toUpperCase()}
+          </td>
           <td>{currency.balance}</td>
         </tr>
       )));
@@ -21,7 +24,6 @@ function WalletTable() {
     <table>
       <thead>
         <tr>
-          <th aria-label="edit" />
           <th>Tokens</th>
           <th>Balance</th>
         </tr>

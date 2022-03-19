@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function AddTokenHeader() {
   return (
-    <div>
+    <div className="tokenHeader">
       <h4>Add Token</h4>
       <Link to="/"><Button className="btn btnGray" type="button">Voltar</Button></Link>
     </div>

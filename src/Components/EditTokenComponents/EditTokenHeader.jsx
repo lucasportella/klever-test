@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 
 function EditTokenHeader() {
   return (
-    <div>
+    <div className="tokenHeader">
       <h4>Edit Token</h4>
       <Link to="/"><Button className="btn btnGray" type="button">Voltar</Button></Link>
     </div>

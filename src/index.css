@@ -10,10 +10,7 @@ body {
   padding-top: 3%;
   height: 100%;
   background-color: rgb(19,21,42,1);
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family:  
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -30,22 +27,27 @@ body {
   width: 100%;
 }
 
+.title {
+  text-align: center;
+  margin-top: 2%;
+}
+
 .kleverLogo {
-  width: 200px
+  width: 200px;
 }
 
 .subHeader {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 4%;
-  margin-bottom: 4%;
+  margin-bottom: 3%;
   margin-left: 23%;
   margin-right: 28%; 
 }
 
 .btnFixedArea {
-  min-width: 20%;
+  min-width: 30%;
 }
 
 .starAndTitle {
@@ -65,7 +67,8 @@ h2 {
 }
 
 .btn {
-  min-width: 38%;
+  font-weight: bold;
+  min-width: 100px;
   padding: 5px;
 }
 
@@ -98,4 +101,68 @@ border: 0px;
 
 table {
   background-color: rgb(19,21,42,1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+thead {
+  width: 46%;
+}
+
+thead tr {
+ display: flex;
+ justify-content: space-between;
+ font-size: smaller;
+}
+
+thead tr:first-child {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+tbody {
+width: 40%;
+}
+
+tbody tr {
+display: flex;
+justify-content: space-between;
+margin: 2%;
+margin-right: 10%;
+font-size: x-large;
+}
+
+tbody tr>td:first-child {
+  width: 30%;
+  display: flex;
+}
+
+tbody tr>td:first-child>span {
+  margin-right: 18%;
+}
+
+
+.tokenHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 3%;
+}
+
+.formDiv {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 4%;
+}
+
+
+.inputs {
+  margin-bottom: 4%;
+}
+
+.formSaveBtn {
+  text-align: right;
+  margin-top: 7%;
 }

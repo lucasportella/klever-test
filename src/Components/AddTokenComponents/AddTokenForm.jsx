@@ -34,21 +34,21 @@ function AddTokenForm() {
   };
 
   return (
-    <div>
+    <div className="formDiv">
       <Form>
-        <Form.Group controlId="formToken">
+        <Form.Group className="formGroup" controlId="formToken">
           <Form.Label>
             Token
-            <Form.Control onChange={handleChange} type="text" name="token" value={useCurrency.token} />
           </Form.Label>
+          <Form.Control className="inputs" required onChange={handleChange} type="text" name="token" value={useCurrency.token.toUpperCase()} />
         </Form.Group>
-        <Form.Group controlId="formBalance">
+        <Form.Group className="formGroup" required controlId="formBalance">
           <Form.Label>
             Balance
-            <Form.Control onChange={handleChange} type="number" name="balance" value={useCurrency.balance} />
           </Form.Label>
+          <Form.Control className="inputs" onChange={handleChange} type="number" name="balance" value={useCurrency.balance} />
         </Form.Group>
-        <Button className="btn btnPink" onClick={saveAndClearInputs} type="button">Save</Button>
+        <div className="formSaveBtn"><Button className="btn btnPink" onClick={saveAndClearInputs} type="button">Save</Button></div>
       </Form>
       {useLoadError ? (
         <div>
