@@ -37,15 +37,15 @@ function AddTokenForm() {
     <div>
       <Form>
         <Form.Group controlId="formToken">
-          <Form.Label htmlFor="inputToken">
+          <Form.Label>
             Token
-            <Form.Control onChange={handleChange} type="text" id="inputToken" name="token" value={useCurrency.token} />
+            <Form.Control onChange={handleChange} type="text" name="token" value={useCurrency.token} />
           </Form.Label>
         </Form.Group>
         <Form.Group controlId="formBalance">
-          <Form.Label htmlFor="inputBalance">
+          <Form.Label>
             Balance
-            <Form.Control onChange={handleChange} type="number" id="inputBalance" name="balance" value={useCurrency.balance} />
+            <Form.Control onChange={handleChange} type="number" name="balance" value={useCurrency.balance} />
           </Form.Label>
         </Form.Group>
         <Button className="btn btnPink" onClick={saveAndClearInputs} type="button">Save</Button>

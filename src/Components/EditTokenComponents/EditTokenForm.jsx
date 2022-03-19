@@ -41,16 +41,16 @@ function EditTokenForm() {
   return (
     <div>
       <Form>
-        <Form.Group>
-          <Form.Label htmlFor="tokenInput">
+        <Form.Group controlId="formToken">
+          <Form.Label>
             Token
-            <Form.Control required onChange={handleChange} type="text" id="tokenInput" name="token" value={useCurrency.token} />
+            <Form.Control required onChange={handleChange} type="text" name="token" value={useCurrency.token} />
           </Form.Label>
         </Form.Group>
-        <Form.Group>
-          <Form.Label htmlFor="balanceInput">
+        <Form.Group controlId="formBalance">
+          <Form.Label>
             Balance
-            <Form.Control required onChange={handleChange} type="number" id="balanceInput" name="balance" value={useCurrency.balance} />
+            <Form.Control required onChange={handleChange} type="number" name="balance" value={useCurrency.balance} />
           </Form.Label>
         </Form.Group>
         <Button className="btn btnRed" onClick={deleteTokenAndExit} type="button">Remove</Button>

@@ -1,13 +1,27 @@
 import React from 'react';
-import shootingStar from '../../assets/shooting-star.svg';
+import PropTypes from 'prop-types';
+import shootingStar from '../../assets/shooting-star-yellow.png';
 
-function SubHeader() {
+function SubHeader({ child }) {
   return (
-    <div>
-      <h2>Wish Wallet</h2>
-      <img className="shootingStar" src={shootingStar} alt="shooting star" />
+    <div className="subHeader">
+      <div className="starAndTitle">
+        <img className="shootingStar" src={shootingStar} alt="shooting star" />
+        <h2>Wish Wallet</h2>
+      </div>
+      <div className="btnFixedArea">
+        {child}
+      </div>
     </div>
   );
 }
 
 export default SubHeader;
+
+SubHeader.propTypes = {
+  child: PropTypes.element,
+};
+
+SubHeader.defaultProps = {
+  child: null,
+};

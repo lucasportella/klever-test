@@ -7,6 +7,7 @@ html {
   background-color: rgb(19,21,42,1);
 }
 body {
+  padding-top: 3%;
   height: 100%;
   background-color: rgb(19,21,42,1);
   display: flex;
@@ -21,18 +22,46 @@ body {
 
 #root {
   height: 100%;
+  width: 100%;
 }
 
 .fatherDiv {
   height: 100%;
+  width: 100%;
 }
 
 .kleverLogo {
-  width: 300px
+  width: 200px
+}
+
+.subHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 23%;
+  margin-right: 28%; 
+}
+
+.btnFixedArea {
+  min-width: 20%;
+}
+
+.starAndTitle {
+  display: flex;
+  align-items: center;
+  margin-right: 20%;
+}
+
+h2 {
+  margin: 0;
 }
 
 .shootingStar {
-  width: 30px;
+  width: 60px;
+  padding: 3%;
+  padding-right: 1%;
 }
 
 .btn {
@@ -65,4 +94,8 @@ border: 0px;
 
 .btnRed:hover {
   background-color: rgb(114, 2, 0);
+}
+
+table {
+  background-color: rgb(19,21,42,1);
 }
