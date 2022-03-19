@@ -53,8 +53,8 @@ function EditTokenForm() {
             <Form.Control required onChange={handleChange} type="number" id="balanceInput" name="balance" value={useCurrency.balance} />
           </Form.Label>
         </Form.Group>
-        <Button onClick={deleteTokenAndExit} type="button">Remove</Button>
-        <Button onClick={editTokenAndExit} type="button">Save</Button>
+        <Button className="btn btnRed" onClick={deleteTokenAndExit} type="button">Remove</Button>
+        <Button className="btn btnPink" onClick={editTokenAndExit} type="button">Save</Button>
       </Form>
       {useLoadError ? (
         <div>

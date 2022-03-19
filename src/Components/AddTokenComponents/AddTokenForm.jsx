@@ -48,7 +48,7 @@ function AddTokenForm() {
             <Form.Control onChange={handleChange} type="number" id="inputBalance" name="balance" value={useCurrency.balance} />
           </Form.Label>
         </Form.Group>
-        <Button onClick={saveAndClearInputs} type="button">Save</Button>
+        <Button className="btn btnPink" onClick={saveAndClearInputs} type="button">Save</Button>
       </Form>
       {useLoadError ? (
         <div>

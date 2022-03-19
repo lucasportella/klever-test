@@ -6,7 +6,7 @@ function AddTokenHeader() {
   return (
     <div>
       <h4>Add Token</h4>
-      <Link to="/"><Button type="button">Voltar</Button></Link>
+      <Link to="/"><Button className="btn btnGray" type="button">Voltar</Button></Link>
     </div>
   );
 }
