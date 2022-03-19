@@ -7,10 +7,9 @@ const storageNewToken = (payload) => {
     const wallet = JSON.parse(localStorage.getItem('wallet'));
     if (wallet.some((currency) => currency.token === payload.token)) {
       throw new Error('Token already exists on wallet');
-    } else {
-      wallet.push(payload);
-      localStorage.setItem('wallet', JSON.stringify(wallet));
     }
+    wallet.push(payload);
+    localStorage.setItem('wallet', JSON.stringify(wallet));
   }
 };
 
