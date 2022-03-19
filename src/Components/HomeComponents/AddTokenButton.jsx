@@ -1,8 +1,9 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function AddTokenButton() {
-  return <button type="button"><Link to="/addtoken">Add Token</Link></button>;
+  return <Link to="/addtoken"><Button type="button">Add Token</Button></Link>;
 }
 
 export default AddTokenButton;

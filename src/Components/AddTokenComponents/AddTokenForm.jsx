@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Button, Form } from 'react-bootstrap';
 import { storageNewToken } from '../../stateManager/localstorageManager';
 
 function AddTokenForm() {
@@ -34,17 +35,21 @@ function AddTokenForm() {
 
   return (
     <div>
-      <form>
-        <label htmlFor="inputToken">
-          Token
-          <input onChange={handleChange} type="text" id="inputToken" name="token" value={useCurrency.token} />
-        </label>
-        <label htmlFor="inputBalance">
-          Balance
-          <input onChange={handleChange} type="number" id="inputBalance" name="balance" value={useCurrency.balance} />
-        </label>
-        <button onClick={saveAndClearInputs} type="button">Save</button>
-      </form>
+      <Form>
+        <Form.Group controlId="formToken">
+          <Form.Label htmlFor="inputToken">
+            Token
+            <Form.Control onChange={handleChange} type="text" id="inputToken" name="token" value={useCurrency.token} />
+          </Form.Label>
+        </Form.Group>
+        <Form.Group controlId="formBalance">
+          <Form.Label htmlFor="inputBalance">
+            Balance
+            <Form.Control onChange={handleChange} type="number" id="inputBalance" name="balance" value={useCurrency.balance} />
+          </Form.Label>
+        </Form.Group>
+        <Button onClick={saveAndClearInputs} type="button">Save</Button>
+      </Form>
       {useLoadError ? (
         <div>
           {'Error: '}

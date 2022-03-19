@@ -6,7 +6,7 @@ import WalletTable from '../Components/HomeComponents/WalletTable';
 
 function Home() {
   return (
-    <div>
+    <div className="fatherDiv">
       <Header />
       <SubHeader />
       <AddTokenButton />
