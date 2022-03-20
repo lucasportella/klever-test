@@ -53,6 +53,6 @@ export default EditTokenModal;
 EditTokenModal.propTypes = {
   useCurrency: PropTypes.shape({
     token: PropTypes.string.isRequired,
-    balance: PropTypes.number.isRequired,
+    balance: PropTypes.string.isRequired,
   }).isRequired,
 };

@@ -46,7 +46,7 @@ function AddTokenForm() {
           <Form.Label>
             Balance
           </Form.Label>
-          <Form.Control className="inputs" onChange={handleChange} type="number" name="balance" value={useCurrency.balance} />
+          <Form.Control className="inputs" onChange={handleChange} type="number" step="0.01" name="balance" value={useCurrency.balance} />
         </Form.Group>
         <div className="formBtnRight"><Button className="btn btnPink" onClick={saveAndClearInputs} type="button">Save</Button></div>
       </Form>
