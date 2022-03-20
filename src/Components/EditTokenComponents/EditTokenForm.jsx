@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Alert, Button, Form } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { storageEditToken, storageDeleteToken } from '../../stateManager/localstorageManager';
+import { storageEditToken } from '../../stateManager/localstorageManager';
+import EditTokenModal from './EditTokenModal';
 
 function EditTokenForm() {
   const navigate = useNavigate();
@@ -23,11 +24,6 @@ function EditTokenForm() {
     }
   }, [useErrorMessage]);
 
-  const deleteTokenAndExit = () => {
-    storageDeleteToken(useCurrency);
-    navigate('/');
-  };
-
   const editTokenAndExit = () => {
     if (useCurrency.token && useCurrency.balance) {
       storageEditToken(prevState, useCurrency);
@@ -37,30 +33,6 @@ function EditTokenForm() {
       setErrorMessage('Please, fill out all fields.');
     }
   };
-
-  // const renderModal = () => (
-  //   <Modal.Dialog className="modal">
-  //     <Modal.Header closeButton>
-  //       <Modal.Title>Please, confirm you want to remove the selected token.</Modal.Title>
-  //     </Modal.Header>
-
-  //     <Modal.Body>
-  //       <p>
-  //         You will be removing the Token
-  //         {' '}
-  //         {`${useCurrency.token}`}
-  //         {' '}
-  //         with the balance of
-  //         {`${useCurrency.balance}`}
-  //       </p>
-  //     </Modal.Body>
-
-  //     <Modal.Footer>
-  //       <Button variant="secondary">Close</Button>
-  //       <Button variant="primary">Save changes</Button>
-  //     </Modal.Footer>
-  //   </Modal.Dialog>
-  // );
 
   return (
     <div className="formDiv">
@@ -78,7 +50,7 @@ function EditTokenForm() {
           <Form.Control className="inputs" required onChange={handleChange} type="number" name="balance" value={useCurrency.balance} />
         </Form.Group>
         <div className="btnWrapper">
-          <Button className="btn btnRed" onClick={deleteTokenAndExit} type="button">Remove</Button>
+          <EditTokenModal useCurrency={useCurrency} />
           <Button className="btn btnPink" onClick={editTokenAndExit} type="button">Save</Button>
         </div>
       </Form>

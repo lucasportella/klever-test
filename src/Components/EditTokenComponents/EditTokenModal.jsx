@@ -1,28 +1,46 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { storageDeleteToken } from '../../stateManager/localstorageManager';
 
-function EditTokenModal() {
+function EditTokenModal({ useCurrency }) {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate();
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const deleteTokenAndExit = () => {
+    storageDeleteToken(useCurrency);
+    navigate('/');
+  };
+
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+      <Button className="btnRed" onClick={handleShow}>
+        Remove
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header>
           <Modal.Title>Confirm token removal?</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you`&apos;`re reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          You will be removing the token
+          {' '}
+          <span style={{ color: 'red' }}>{`${useCurrency.token}`}</span>
+          {' '}
+          with a balance of
+          {' '}
+          <span style={{ color: 'red' }}>{`${useCurrency.balance}`}</span>
+          .
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button className="btnRed" onClick={deleteTokenAndExit}>
+            Remove
           </Button>
         </Modal.Footer>
       </Modal>
@@ -31,3 +49,10 @@ function EditTokenModal() {
 }
 
 export default EditTokenModal;
+
+EditTokenModal.propTypes = {
+  useCurrency: PropTypes.shape({
+    token: PropTypes.string.isRequired,
+    balance: PropTypes.number.isRequired,
+  }).isRequired,
+};

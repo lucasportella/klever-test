@@ -3,7 +3,6 @@ import Header from '../Components/SharedComponents/Header';
 import SubHeader from '../Components/SharedComponents/SubHeader';
 import EditTokenHeader from '../Components/EditTokenComponents/EditTokenHeader';
 import EditTokenForm from '../Components/EditTokenComponents/EditTokenForm';
-import EditTokenModal from '../Components/EditTokenComponents/EditTokenModal';
 
 function EditToken() {
   return (
@@ -12,7 +11,6 @@ function EditToken() {
       <SubHeader />
       <EditTokenHeader />
       <EditTokenForm />
-      <EditTokenModal />
     </div>
   );
 }
