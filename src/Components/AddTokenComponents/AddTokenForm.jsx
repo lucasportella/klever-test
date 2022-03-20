@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Alert, Button, Form } from 'react-bootstrap';
 import { storageNewToken } from '../../stateManager/localstorageManager';
 
 function AddTokenForm() {
@@ -51,9 +51,11 @@ function AddTokenForm() {
         <div className="formBtnRight"><Button className="btn btnPink" onClick={saveAndClearInputs} type="button">Save</Button></div>
       </Form>
       {useLoadError ? (
-        <div>
-          {'Error: '}
-          {useErrorMessage}
+        <div className="divAlert">
+          <Alert variant="danger">
+            {'Error: '}
+            {useErrorMessage}
+          </Alert>
         </div>
       ) : null}
 

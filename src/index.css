@@ -42,8 +42,8 @@ body {
   justify-content: center;
   margin-top: 4%;
   margin-bottom: 3%;
-  margin-left: 23%;
-  margin-right: 28%; 
+  margin-left: 26%;
+  margin-right: 20%;
 }
 
 .btnFixedArea {
@@ -72,31 +72,33 @@ h2 {
   padding: 5px;
 }
 
-.btnPink {
-  background-color: rgba(170, 51, 180, 1);
-  border:0px;
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: rgb(139, 41, 148) !important;
+  border-color: rgba(170, 51, 180, 1) !important;
 }
 
 .btnPink:hover {
-  background-color:rgb(139, 41, 148) ;
+  background-color: rgb(123, 35, 131) !important;
+  border-color:rgba(170, 51, 180, 1);
 }
 
+
 .btnGray {
-  background-color: rgba(100,100,100,1);
+background-color: rgba(100,100,100,1) !important;
 border: 0px;
 }
 
 .btnGray:hover {
-  background-color: rgb(85, 85, 85, 1);
+  background-color: rgb(85, 85, 85, 1) !important;
 }
 
 .btnRed {
-background-color: rgba(146, 3, 0, 1);
+background-color: rgba(146, 3, 0, 1) !important;
 border: 0px;
 }
 
 .btnRed:hover {
-  background-color: rgb(114, 2, 0);
+  background-color: rgb(114, 2, 0) !important;
 }
 
 table {
@@ -113,7 +115,7 @@ thead {
 thead tr {
  display: flex;
  justify-content: space-between;
- font-size: smaller;
+ font-size: small;
 }
 
 thead tr:first-child {
@@ -146,19 +148,15 @@ tbody tr>td:first-child>span {
 .tokenHeader {
   display: flex;
   justify-content: space-between;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 34%;
+  margin-right: 34%;
   margin-bottom: 3%;
 }
 
 .formDiv {
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 34%;
+  margin-right: 34%;
   margin-bottom: 4%;
-}
-
-form {
-  margin-right: 0;
 }
 
 
@@ -175,4 +173,12 @@ form {
 .formBtnRight {
   text-align: right;
   margin-top: 7%;
+}
+
+.divAlert {
+  margin-top: 3%;
+}
+
+.modal-content {
+  background-color: rgb(19,21,42,1);
 }

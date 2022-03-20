@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Alert, Button, Form } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { storageEditToken, storageDeleteToken } from '../../stateManager/localstorageManager';
 
@@ -23,6 +23,11 @@ function EditTokenForm() {
     }
   }, [useErrorMessage]);
 
+  const deleteTokenAndExit = () => {
+    storageDeleteToken(useCurrency);
+    navigate('/');
+  };
+
   const editTokenAndExit = () => {
     if (useCurrency.token && useCurrency.balance) {
       storageEditToken(prevState, useCurrency);
@@ -33,10 +38,29 @@ function EditTokenForm() {
     }
   };
 
-  const deleteTokenAndExit = () => {
-    storageDeleteToken(useCurrency);
-    navigate('/');
-  };
+  // const renderModal = () => (
+  //   <Modal.Dialog className="modal">
+  //     <Modal.Header closeButton>
+  //       <Modal.Title>Please, confirm you want to remove the selected token.</Modal.Title>
+  //     </Modal.Header>
+
+  //     <Modal.Body>
+  //       <p>
+  //         You will be removing the Token
+  //         {' '}
+  //         {`${useCurrency.token}`}
+  //         {' '}
+  //         with the balance of
+  //         {`${useCurrency.balance}`}
+  //       </p>
+  //     </Modal.Body>
+
+  //     <Modal.Footer>
+  //       <Button variant="secondary">Close</Button>
+  //       <Button variant="primary">Save changes</Button>
+  //     </Modal.Footer>
+  //   </Modal.Dialog>
+  // );
 
   return (
     <div className="formDiv">
@@ -59,9 +83,12 @@ function EditTokenForm() {
         </div>
       </Form>
       {useLoadError ? (
-        <div>
-          {'Error: '}
-          {useErrorMessage}
+        <div className="divAlert">
+          <Alert variant="danger">
+            {' '}
+            {'Error: '}
+            {useErrorMessage}
+          </Alert>
         </div>
       ) : null}
     </div>
