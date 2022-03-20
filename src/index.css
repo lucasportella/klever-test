@@ -157,12 +157,22 @@ tbody tr>td:first-child>span {
   margin-bottom: 4%;
 }
 
+form {
+  margin-right: 0;
+}
+
 
 .inputs {
   margin-bottom: 4%;
 }
 
-.formSaveBtn {
+.btnWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7%;
+}
+
+.formBtnRight {
   text-align: right;
   margin-top: 7%;
 }

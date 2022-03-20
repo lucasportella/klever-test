@@ -44,17 +44,19 @@ function EditTokenForm() {
         <Form.Group className="formGroup" controlId="formToken">
           <Form.Label>
             Token
-            <Form.Control className="inputs" required onChange={handleChange} type="text" name="token" value={useCurrency.token.toUpperCase()} />
           </Form.Label>
+          <Form.Control className="inputs" required onChange={handleChange} type="text" name="token" value={useCurrency.token.toUpperCase()} />
         </Form.Group>
         <Form.Group className="formGroup" controlId="formBalance">
           <Form.Label>
             Balance
-            <Form.Control className="inputs" required onChange={handleChange} type="number" name="balance" value={useCurrency.balance} />
           </Form.Label>
+          <Form.Control className="inputs" required onChange={handleChange} type="number" name="balance" value={useCurrency.balance} />
         </Form.Group>
-        <Button className="btn btnRed" onClick={deleteTokenAndExit} type="button">Remove</Button>
-        <Button className="btn btnPink" onClick={editTokenAndExit} type="button">Save</Button>
+        <div className="btnWrapper">
+          <Button className="btn btnRed" onClick={deleteTokenAndExit} type="button">Remove</Button>
+          <Button className="btn btnPink" onClick={editTokenAndExit} type="button">Save</Button>
+        </div>
       </Form>
       {useLoadError ? (
         <div>
