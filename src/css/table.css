@@ -42,3 +42,14 @@ tbody tr>td:first-child {
 tbody tr>td:first-child>span {
     margin-right: 18%;
   }
+
+.noTokensDiv {
+  display: flex;
+}
+
+.noTokensAlert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
