@@ -1,0 +1,35 @@
+/* buttons */
+.btn {
+    font-weight: bold;
+    min-width: 100px;
+    padding: 5px;
+  }
+  
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: rgb(139, 41, 148) !important;
+    border-color: rgba(170, 51, 180, 1) !important;
+  }
+  
+.btnPink:hover {
+    background-color: rgb(123, 35, 131) !important;
+    border-color:rgba(170, 51, 180, 1);
+  }
+  
+  
+.btnGray {
+  background-color: rgba(100,100,100,1) !important;
+  border: 0px;
+  }
+  
+.btnGray:hover {
+    background-color: rgb(85, 85, 85, 1) !important;
+  }
+  
+.btnRed {
+  background-color: rgba(146, 3, 0, 1) !important;
+  border: 0px;
+  }
+  
+.btnRed:hover {
+    background-color: rgb(114, 2, 0) !important;
+  }

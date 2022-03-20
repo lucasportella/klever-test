@@ -1,0 +1,30 @@
+/* forms */
+.formDiv {
+    margin-left: 34%;
+    margin-right: 34%;
+    margin-bottom: 4%;
+  }
+  
+  
+  .inputs {
+    margin-bottom: 4%;
+  }
+  
+  .btnWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7%;
+  }
+  
+  .formBtnRight {
+    text-align: right;
+    margin-top: 7%;
+  }
+  
+  .divAlert {
+    margin-top: 3%;
+  }
+  
+  .modal-content {
+    background-color: rgb(19,21,42,1);
+  }

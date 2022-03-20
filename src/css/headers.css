@@ -1,0 +1,47 @@
+/* headers */
+.title {
+    text-align: center;
+    margin-top: 2%;
+  }
+  
+.kleverLogo {
+    width: 200px;
+  }
+  
+.subHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    margin-left: 26%;
+    margin-right: 20%;
+  }
+  
+.btnFixedArea {
+    min-width: 30%;
+  }
+  
+.starAndTitle {
+    display: flex;
+    align-items: center;
+    margin-right: 20%;
+  }
+  
+h2 {
+    margin: 0;
+  }
+  
+.shootingStar {
+    width: 60px;
+    padding: 3%;
+    padding-right: 1%;
+  }
+  
+.tokenHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 34%;
+    margin-right: 34%;
+    margin-bottom: 3%;
+  }
