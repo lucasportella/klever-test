@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function AddTokenHeader() {
+  const navigate = useNavigate();
   return (
     <div className="tokenHeader">
       <h4>Add Token</h4>
-      <Link to="/"><Button className="btn btnGray" type="button">Voltar</Button></Link>
+      <Button onClick={() => navigate('/')} className="btn btnGray" type="button">Voltar</Button>
     </div>
   );
 }

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Alert, Button, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import { storageNewToken } from '../../stateManager/localstorageManager';
 
 function AddTokenForm() {
   const [useCurrency, setCurrency] = useState({ token: '', balance: '' });
   const [useErrorMessage, setErrorMessage] = useState('');
   const [useLoadError, setLoadError] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = ({ target: { name, value } }) => {
     setCurrency({ ...useCurrency, [name]: value });
@@ -19,12 +21,11 @@ function AddTokenForm() {
     }
   }, [useErrorMessage]);
 
-  const saveAndClearInputs = () => {
+  const saveAndExit = () => {
     if (useCurrency.token && useCurrency.balance) {
       try {
         storageNewToken(useCurrency);
-        setCurrency({ token: '', balance: '' });
-        setErrorMessage('');
+        navigate('/');
       } catch (err) {
         setErrorMessage(err.message);
       }
@@ -48,7 +49,7 @@ function AddTokenForm() {
           </Form.Label>
           <Form.Control className="inputs" onChange={handleChange} type="number" step="0.01" name="balance" value={useCurrency.balance} />
         </Form.Group>
-        <div className="formBtnRight"><Button className="btn btnPink" onClick={saveAndClearInputs} type="button">Save</Button></div>
+        <div className="formBtnRight"><Button className="btn btnPink" onClick={saveAndExit} type="button">Save</Button></div>
       </Form>
       {useLoadError ? (
         <div className="divAlert">
