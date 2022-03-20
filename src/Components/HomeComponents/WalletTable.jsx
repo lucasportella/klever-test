@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { Alert } from 'react-bootstrap';
 import { loadAllSavedTokens } from '../../stateManager/localstorageManager';
 import edit from '../../assets/edit.png';
 

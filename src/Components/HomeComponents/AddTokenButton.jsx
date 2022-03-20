@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function AddTokenButton() {
-  return <Link to="/addtoken"><Button className="btn btnPink" type="button">Add Token</Button></Link>;
+  const navigate = useNavigate();
+
+  return (<Button onClick={() => navigate('addtoken')} className="btn btnPink" type="button">Add Token</Button>);
 }
 
 export default AddTokenButton;
