@@ -30,7 +30,7 @@ describe('test pages static content', () => {
     ];
 
     pageElements.forEach((element) => {
-      expect(element).toBeInTheDocument();
+      expect(element).toBeVisible();
     });
   });
 
@@ -40,8 +40,6 @@ describe('test pages static content', () => {
         <App />
       </MemoryRouter>,
     );
-    const history = createMemoryHistory();
-    expect(history.location.pathname).toBe('/addtoken');
 
     const title = screen.getByAltText(/Klever logo/i);
     const headerTitle = screen.getByText(/Wish Wallet/);
@@ -56,7 +54,7 @@ describe('test pages static content', () => {
     ];
 
     pageElements.forEach((element) => {
-      expect(element).toBeInTheDocument();
+      expect(element).toBeVisible();
     });
   });
 });
