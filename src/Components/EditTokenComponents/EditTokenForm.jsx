@@ -26,9 +26,13 @@ function EditTokenForm() {
 
   const editTokenAndExit = () => {
     if (useCurrency.token && useCurrency.balance) {
-      storageEditToken(prevState, useCurrency);
-      setErrorMessage('');
-      navigate('/');
+      try {
+        storageEditToken(prevState, useCurrency);
+        setErrorMessage('');
+        navigate('/');
+      } catch (err) {
+        setErrorMessage(err.message);
+      }
     } else {
       setErrorMessage('Please, fill out all fields.');
     }

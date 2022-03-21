@@ -52,6 +52,13 @@ describe('test functions from localStorageManager file', () => {
       const wallet = loadAllSavedTokens();
       expect(wallet).toEqual([newValues]);
     });
+
+    test('when throws repeated token error', () => {
+      storageNewToken(payload1);
+      storageNewToken(payload2);
+      const newValues = payload2;
+      expect(() => storageEditToken(payload1, newValues)).toThrowError(/Token already exists on wallet/);
+    });
   });
 
   describe('test storageDeleteToken function', () => {
