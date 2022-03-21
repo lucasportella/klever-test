@@ -51,7 +51,7 @@ function EditTokenForm() {
           <Form.Label>
             Balance
           </Form.Label>
-          <Form.Control className="inputs" required onChange={handleChange} type="number" step="0.01" name="balance" value={useCurrency.balance} />
+          <Form.Control className="inputs" required onChange={handleChange} type="text" name="balance" value={useCurrency.balance.replace(/[a-zA-Z]/g, '')} />
         </Form.Group>
         <div className="btnWrapper">
           <EditTokenModal useCurrency={useCurrency} />
