@@ -44,13 +44,22 @@ describe('test pages static content', () => {
     const title = screen.getByAltText(/Klever logo/i);
     const headerTitle = screen.getByText(/Wish Wallet/);
     const headerLogo = screen.getByAltText(/shooting star/i);
+    const subHeaderTitle = screen.getByText(/Add Token/);
     const backBtn = screen.getByText(/Voltar/);
     const tokenLabel = screen.getByLabelText(/Token/);
     const balanceLabel = screen.getByLabelText(/Balance/);
     const saveBtn = screen.getByText(/Save/);
 
     const pageElements = [
-      title, headerTitle, headerLogo, backBtn, tokenLabel, balanceLabel, balanceLabel, saveBtn,
+      title,
+      headerTitle,
+      headerLogo,
+      subHeaderTitle,
+      backBtn,
+      tokenLabel,
+      balanceLabel,
+      balanceLabel,
+      saveBtn,
     ];
 
     pageElements.forEach((element) => {
