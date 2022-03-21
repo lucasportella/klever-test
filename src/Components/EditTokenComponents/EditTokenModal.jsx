@@ -28,7 +28,7 @@ function EditTokenModal({ useCurrency }) {
         <Modal.Body>
           You will be removing the token
           {' '}
-          <span style={{ color: 'red' }}>{`${useCurrency.token}`}</span>
+          <span style={{ color: 'red' }}>{`${useCurrency.token.toUpperCase()}`}</span>
           {' '}
           with a balance of
           {' '}

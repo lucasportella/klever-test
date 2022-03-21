@@ -27,9 +27,10 @@ const storageEditToken = (prevState, { token, balance }) => {
   localStorage.setItem('wallet', JSON.stringify(updatedWallet));
 };
 
-const storageDeleteToken = (payload) => {
+const storageDeleteToken = ({ token, balance }) => {
+  const formattedPayload = { token: token.toUpperCase(), balance };
   const wallet = loadAllSavedTokens();
-  const updatedWallet = wallet.filter((currency) => currency.token !== payload.token);
+  const updatedWallet = wallet.filter((currency) => currency.token !== formattedPayload.token);
   localStorage.setItem('wallet', JSON.stringify(updatedWallet));
 };
 
