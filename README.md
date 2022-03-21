@@ -8,9 +8,9 @@ The project objective was to develop a website where a user can control a token 
 
 ## Technologies used
 
-For the project's core, React library was used for creating html and managing component state.
-Vanilla css and Bootstrap framework were used for styling.
-Jest and RTL were used for testing localStorage functions and page rendering, respectively.
+For the project's core, React library was used for creating HTML and managing component state.\
+Vanilla CSS and Bootstrap framework were used for styling.\
+Jest and RTL were used for testing localStorage functions and page rendering, respectively.\
 Also, the code was written following Eslint rules (AirBnB configuration).
 
 ## Development
@@ -36,5 +36,5 @@ Node (recommended v16.14.0 lts/gallium)
   - in the terminal run the following commands:
       - ***npm install***
       - ***npm start***
-  - to run the tests:
-      - ***npm test ***
+  - to run tests:
+      - ***npm test***
