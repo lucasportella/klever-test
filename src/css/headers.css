@@ -1,47 +1,54 @@
 /* headers */
 .title {
-    text-align: center;
-    margin-top: 2%;
-  }
-  
+  text-align: center;
+  margin-top: 2%;
+}
+
 .kleverLogo {
-    width: 200px;
-  }
-  
+  width: 200px;
+}
+
+.subHeaderFather {
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
 .subHeader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 4%;
-    margin-bottom: 3%;
-    margin-left: 26%;
-    margin-right: 20%;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4%;
+  margin-bottom: 3%;
+  width: 40%;
+}
+
 .btnFixedArea {
-    min-width: 30%;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin-right: 9%;
+}
+
 .starAndTitle {
-    display: flex;
-    align-items: center;
-    margin-right: 20%;
-  }
-  
+  display: flex;
+  align-items: center;
+}
+
 h2 {
-    margin: 0;
-  }
-  
+  margin: 0;
+}
+
 .shootingStar {
-    width: 60px;
-    padding: 3%;
-    padding-right: 1%;
-  }
-  
+  width: 60px;
+  padding: 3%;
+  padding-right: 1%;
+}
+
 .tokenHeader {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 34%;
-    margin-right: 34%;
-    margin-bottom: 3%;
-  }
+  display: flex;
+  justify-content: space-between;
+  margin-left: 34%;
+  margin-right: 34%;
+  margin-bottom: 3%;
+}
