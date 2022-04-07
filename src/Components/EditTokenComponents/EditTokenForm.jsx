@@ -13,7 +13,7 @@ function EditTokenForm() {
   const [useLoadError, setLoadError] = useState(false);
 
   const handleChange = ({ target: { name, value } }) => {
-    setCurrency({ ...useCurrency, [name]: value });
+    setCurrency({ ...useCurrency, [name]: name === 'token' ? value.toUpperCase() : value.replace(/[a-zA-Z]/g, '') });
   };
 
   useEffect(() => {
@@ -45,13 +45,13 @@ function EditTokenForm() {
           <Form.Label>
             Token
           </Form.Label>
-          <Form.Control className="inputs" required onChange={handleChange} type="text" name="token" value={useCurrency.token.toUpperCase()} />
+          <Form.Control className="inputs" required onChange={handleChange} type="text" name="token" value={useCurrency.token} />
         </Form.Group>
         <Form.Group className="formGroup" controlId="formBalance">
           <Form.Label>
             Balance
           </Form.Label>
-          <Form.Control className="inputs" required onChange={handleChange} type="text" name="balance" value={useCurrency.balance.replace(/[a-zA-Z]/g, '')} />
+          <Form.Control className="inputs" required onChange={handleChange} type="text" name="balance" value={useCurrency.balance} />
         </Form.Group>
         <div className="btnWrapper">
           <EditTokenModal useCurrency={useCurrency} />
