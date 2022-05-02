@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { loadAllSavedTokens } from '../../stateManager/localstorageManager';
 import edit from '../../assets/edit.png';
 
 function WalletTable() {
+  const Button = styled.h1`
+  background-color: teal;
+  color: white;
+  `;
+
   const savedTokens = loadAllSavedTokens();
   const renderTableContent = () => {
     if (savedTokens && savedTokens.length) {
@@ -22,6 +28,7 @@ function WalletTable() {
   renderTableContent();
   return (
     <div>
+      <Button>styled component!</Button>
       <table>
         <thead>
           <tr>
